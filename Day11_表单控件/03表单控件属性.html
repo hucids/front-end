@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单控件属性
+     type:表单控件共有属性
+     取值:  一般搭配input使用  所有要提交的信息都需要配对name属性
+        1.text:文本框 可见
+        2.password:密码框 不可见
+        3.radio:单选框 用户只能从多个选项中选择一个 同一组单选框的name属性要都相同 value值
+        4.submit:提交按钮 提交的是value值 需要配合在form表单内使用才能提交给后端
+        5.checbox:复选框 同一组多选框的name属性要都相同 value值
+        6.reset:重置按钮 需要配合在form表单内使用才能提交给后端  后续会自己写
+     -->
+    <form action="">请选择你的性别:
+        男<input type="radio" name="gender" value="male">
+        女<input type="radio" name="gender" value="female">
+        <input type="submit">
+    </form>
+
+    <form action="">选择你爱吃的水果:
+        苹果<input type="checkbox" name="fruits" value="apple">
+        梨子<input type="checkbox" name="fruits" value="peal">
+        香蕉<input type="checkbox" name="fruits" value="banana">
+    </form>
+
+</body>
+</html>

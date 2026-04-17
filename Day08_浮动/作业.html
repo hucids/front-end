@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 去除列表标签的默认样式 */
+        ul,li,ol{
+            list-style: none;
+        }
+        .wrap{
+            height: 50px;
+            background-color: #459df5;
+        }
+        .wrap .nav{
+            width: 1200px;
+            height: 50px;
+            /* background-color: orange; */
+            margin: 0 auto;
+        }
+        .wrap .nav .nav-left{
+            width: 700px;
+            height: 50px;
+            /* background-color: pink; */
+            float: left;
+        }
+        .wrap .nav .nav-left li{
+            float: left;
+            line-height: 50px;
+            /* margin没有颜色 而padding显示背景颜色 故要选用padding */
+            padding: 0 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: white;
+        }
+        .wrap .nav .nav-left li:nth-child(1):hover{
+            background-color: green;
+        }
+        .wrap .nav .nav-left li:nth-child(2):hover{
+            background-color: red;
+        }
+        .wrap .nav .nav-right{
+            height: 50px;
+            width: 110px;
+            /* background-color: purple; */
+            float: right;
+            color: #fff;
+        }
+        .wrap .nav .nav-right span{
+            line-height: 50px;
+            cursor: pointer;
+        }
+        .wrap .nav .nav-right span:nth-child(1){
+            /* 行内元素 要改成行内块级元素 设置宽高才有用 */
+            width: 20px;
+            height: 20px;
+            /* background-color: red; */
+            background: url(./img/个人中心.png) no-repeat center/100% 100%;
+            display: inline-block;
+            vertical-align: -3px;
+        }
+        .wrap .nav .nav-right span:nth-child(1):hover{
+            background: url(./img/个人.png) no-repeat center/100% 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="nav">
+            <ul class="nav-left">
+                <li>首页</li>
+                <li>秒懂百科</li>
+                <li>特色百科</li>
+                <li>知识专区</li>
+                <li>加入百科</li>
+                <li>百科团队</li>
+                <li>权威合作</li>
+            </ul>
+            <div class="nav-right">
+                <!-- 显示背景图片标签 -->
+                <span></span>
+                <span>个人中心</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

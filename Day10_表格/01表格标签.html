@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 给表格设置宽高时 行和列会自动分配大小 也可自己控制 */
+        table{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 100px auto;
+        }
+        .one{
+            height: 10px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 表格标签 一个table代表一张表格 功能没有Excel强大(无函数等) 块级元素
+     行:一个tr一行
+     单元格:一个td一个单元格  可用td*3加回车来得到三个单元格 tr同理
+     表头:th 会呈现加粗和居中效果
+
+     语义化标签: 此时不管代码顺序 就按照head body foot顺序来显示
+     thead:用于组织表头内容 可包含tr th元素
+     tbody:定义表格主体内容部分 可包含tr td元素
+     tfoot:定义表格底部区域 可包含tr td元素
+     -->
+    <table>
+        <thead>
+            <tr>
+                <th>商品名称</th>
+                <th>商品价格</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr class="one">
+                <td>商品a</td>
+                <td>100元</td>
+            </tr>
+            <tr>
+                <td>商品b</td>
+                <td>200元</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td>总计</td>
+                <td>300元</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

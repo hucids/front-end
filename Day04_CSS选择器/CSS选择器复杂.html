@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>椰子糖的第四个网页续集</title>
+    <style>
+        /* 组合选择器  标签+类 组合 */
+        span.one {
+            color: aqua;
+        }
+
+        /* 后代选择器 */
+        .box p {
+            color: blue;
+        }
+
+        .yeye p {
+            color: blueviolet;
+        }
+
+        /* 子代选择器 */
+        .box>p {
+            color: red;
+        }
+
+        /* 相邻兄弟选择器 */
+        .one1+p {
+            color: brown;
+        }
+
+        /* 通用兄弟选择器 */
+        .one2~p {
+            color: chocolate;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 复杂选择器 -->
+    <!-- 组合选择器  两个或两个以上的选择器结合使用
+      标签在前 类在后
+     -->
+    <!-- 让曲奇变颜色 -->
+    <span class="one">曲奇</span>
+    <div class="one">土豆</div>
+    <span>青菜</span>
+    <!-- 后代选择器  选中某个元素里的所有子代(直接子代 间接子代)
+      语法: 选择器1 选择器2{属性:值;}  选择器之间以空格隔开
+      找到满足选择器1中的所有子代 在这些子代中找到满足选择器2的所有后代
+     -->
+    <!-- 现要求给内层p标签加颜色 -->
+    <div class="box">
+        <p>单独p标签</p>
+        <div>
+            <p>内内层p标签</p>
+        </div>
+        <span>单独span标签</span>
+    </div>
+    <p>外层p标签</p>
+    <!-- 子代选择器  选中某个元素中的直接子代
+      语法: 选择器1>选择器2{属性:值;}
+      在满足选择器1中的直接子代中找到满足选择器2的元素
+     -->
+    <!-- 现要求嵌套在box中的直接子代中的p标签变颜色 -->
+    <div class="box">
+        <p>单独p标签</p>
+        <div>
+            <p>内内层p标签</p>
+        </div>
+        <span>单独span标签</span>
+    </div>
+    <p>外层p标签</p>
+    <!-- 选择yeye的直接子代的儿子(直接嵌套)
+            子代选择器: .yeye>p{}
+           选择yeye下的所有男性
+            后代选择器: .yeye p{}
+         -->
+    <div class="yeye">
+        <p>我是yeye的儿子</p>
+        <div>我是yeye的女儿
+            <p>我是yeye的孙子
+                <span>我是yeye的曾孙</span>
+            </p>
+            <div>我是yeye的孙女</div>
+        </div>
+    </div>
+
+    <!-- 相邻兄弟选择器: 匹配某一元素后面紧邻的另一个元素(两个元素必须有同一个父级且不存在嵌套关系)
+     语法: 选择器1+选择器2{属性:值;}
+     选择器1用来做定位 选择器2来匹配
+     -->
+    <!-- 现要找yeye1的二儿子 -->
+    <div class="yeye1">
+        <div class="one1">yeye1的大儿子</div>
+        <p>yeye1的二儿子
+            <span>二儿子的女儿</span>
+        </p>
+        <p>yeye1的三儿子</p>
+    </div>
+    <!-- 通用兄弟选择器: 匹配同一父级元素下某一元素后面的所有兄弟元素(兄弟元素必须满足在同一父级下且不存在嵌套关系)
+     语法: 选择器1~选择器2{属性:值;}
+    -->
+    <!-- 选择更大儿子后的所有带p标签的儿子 -->
+    <div class="yeye2">
+        <p class="one2">更大的儿子</p>
+        <div>yeye1的大儿子</div>
+        <p>yeye1的二儿子
+            <span>二儿子的女儿</span>
+        </p>
+        <p>yeye1的三儿子</p>
+    </div>
+    <!-- 缩进 可右键选择格式化文件来自动调整好缩进 -->
+     
+</body>
+
+</html>

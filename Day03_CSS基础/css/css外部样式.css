@@ -1,0 +1,5 @@
+/* CSS代码 注释符号与html不同 */
+span{
+    color: blue;
+    font-size: 30px;
+}

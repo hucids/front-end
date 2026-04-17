@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 0;
+        }
+        div{
+            background-color: orange;
+            /* 此时两元素中间会有空格 */
+            display: inline;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 空格解析 浏览器会将多个连续空格解析为一个空格
+     当元素进行元素转换时(块级转行内级或行内块级)会产生空格
+     处理:
+        1.手动删除(取消其换行)  看起来结构较混乱 -->
+            <div>曲奇</div><div>土豆</div>
+    <!--2.设置父容器的font-size(字体大小)为0 再对元素单独设置字体大小
+            -HTML中空格 换行 制表符 等空白字符在渲染过程中被视为普通文本内容
+                此时空格属于body部分 设置body的字体大小为0即可消除空格 再另外设置元素字体大小
+            但有时会找不到直接父容器 或忘记设置字体大小   之后有更好方法 -->
+     <div>曲奇</div>
+     <div>土豆</div>
+</body>
+</html>

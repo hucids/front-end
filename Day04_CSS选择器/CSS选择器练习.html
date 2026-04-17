@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>椰子糖第四个网页练习</title>
+    <style>
+        /* 1 */
+        #box div{
+            color: red;
+        }
+        /* 2 */
+        #box>span{
+            color: green;
+        }
+        /* 3 */
+        .three+p{
+            color: blue;
+        }
+        /* 4 */
+        .two~p{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <!-- 要求:
+     1.让box中所有div变红色  后代选择器
+     2.让曲奇666和曲奇888变绿色  子代选择器
+     3.让曲奇555变蓝色  相邻兄弟选择器
+     4.让曲奇555和曲奇777变橙色  通用兄弟选择器
+     -->
+    <div id="box">
+        <div class="two">曲奇111
+            <span>曲奇222</span>
+        </div>
+        <div class="three">曲奇333
+            <div>曲奇444</div>
+        </div>
+        <p>曲奇555</p>
+        <span>曲奇666</span>
+        <p>曲奇777</p>
+        <span>曲奇888</span>
+    </div>
+
+    <div>我是外部的div</div>
+</body>
+</html>

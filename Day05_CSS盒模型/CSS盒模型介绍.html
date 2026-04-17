@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>椰子糖的第五个网页</title>
+    <style>
+        /* 清除默认样式 */
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            width: 200px;
+            height: 200px;
+            /* 设置背景 */
+            background-color: orange;
+            /* 处理内容溢出的情况 */
+            overflow: auto;
+            /* 添加边框  可用复合属性(简写) 或 单独写 */
+            /* border: 5px double red; 复合属性 */
+            border-style: double;
+            border-color: red;
+            border-width: 5px;
+            /* 只设置一边的边框 */
+            border-top: 3px solid purple;
+        }
+        body{
+            background-color: pink;
+        }
+        div{
+            width: 0;
+            height: 0;
+            /* transparent表示颜色透明 */
+            /* border: 33px solid transparent;
+            border-bottom-color: red; */
+        }
+        .one{
+            width: 100px;
+            height: 100px;
+            border: 10px solid green;
+            /* 圆角边框 px */
+            border-radius: 46px;
+            /* 圆角边框 % */
+            /* 元素宽高相等 取值>=50% 呈现圆形  不相等 >=50% 呈现椭圆形 */
+            /* border-radius: 50%; */
+            /* 圆角边框特殊取值 */
+            /* border-radius:30px/20px */
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            border: 2px solid orange;
+            /* 设置内边距 */
+            padding: 10px;
+            /* 单一设置某一边内边距 */
+            padding-bottom: 30px;
+        }
+        .three{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            /* 设置外边距 */
+            /* margin: 20px; */
+            /* 设置负值外边距 */
+            margin-bottom: -30px;
+
+        }
+        .four{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            /* 设置某一边外边距 */
+            /* margin-left: 100px; */
+            /* 设置自适应水平居中 */
+            /* margin: 0 auto; */
+        }
+        .A{
+            width: 100px;
+            height: 100px;
+            background-color: darkmagenta;
+        }
+        .B{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标准CSS盒模型:css中用于描述网页元素的概念
+     网页上的每一个元素可看作一个矩形盒子(包括: 内容区域content 内边距padding 边框border 外边距margin)
+     -->
+     <!-- 内容区域  展示给别人看的区域 比如下方的"曲奇"
+        当给元素设置宽度和高度时 设置的是内容区域的大小 200x200  当设置其他（边框 内外边距）时不会影响大小
+        内容溢出时的处理策略: 用overflow
+            overflow取值:
+                -visible:默认值 溢出部分可见
+                -hidden:溢出的部分隐藏
+                -scroll:强制在水平方向和垂直方向出现滚动条(有英文时不会换行处理 因此会有水平方向)
+                -auto:自动在溢出方向上出现滚动条 不溢出则不出现
+            滚动条会占用内容区域的空间
+     -->
+    <p>曲奇</p>
+    <!-- 两个p标签间有间距是因为p标签的外边距为16 -->
+    <p>曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇曲奇overflowoverflowoverflowoverflowoverflowoverflowoverflowoverflowoverflow</p>
+     
+     <!-- 边框 围绕在内容和内边距外的一条线
+      当给元素设置宽高但无内容时看不见
+      border:width(边框的宽度 取值为px单位 默认1px) style(边框的样式) color(边框的颜色 默认黑色)
+      
+      一定要设置style才会显示 其他可不设置
+      style取值:
+        -solid:实线边框
+        -dotted:点线边框
+        -dashed:虚线边框
+        -double:双实线边框
+     border是一个复合属性(简写属性) 也可单独分开写
+
+     边框不占用内容区域空间 但背景会延伸到边框区域
+     -->
+     <!-- 利用边框制作网页三角图标
+     各个边框为梯形 梯形的上底为给元素标签设置的宽和高 都设置为0可得三角形
+     三角形的大小由border中的width宽度来调整大小 -->
+        <div></div>
+     <!-- 设置圆角边框 border-radius px单位取值 值越大 圆角越明显
+      只是样式变化 边框和内容区域空间不变 因此内容会超出圆角边框 可在之后调整内容位置/套一个更大的盒子 更大的盒子采用圆角边框
+      border-radius可接收1-4个值 按左上 右上 右下 左下 来设置 且遵循对称原则 -->
+
+      <!-- border-radius还可取百分比的值 相对于元素的宽度和高度而言 -->
+      <!-- border-radius还可用特殊取值 使用/分隔两个值 分别表示水平和垂直方向的圆角半径 -->
+        <div class="one"></div>
+
+     <!-- 内边距 内容和边框之间的空白区域  padding
+      padding不会影响内容大小 只会把盒子变大
+      padding最小取值只能为0 不能取负值
+      内边距会显示盒子背景颜色(和内容背景颜色保持一致) 不能修改 -->
+        <div class="two">曲奇</div>
+        <!-- 内边距可接收1-4个值 按上右下左 来设置 且遵循对称原则 -->
+
+    <!-- 外边距 元素与元素之间的距离 当两个盒子元素相同时 要设置外边距来区分
+     margin 也可接收1-4个值 按上右下左来设置 切遵循对称原则
+     p h body标签会有默认的外边距(body标签外边距:网页四边的空白区域)  可在style中用*{}清除默认样式
+     
+     margin最常用用法: 对块级元素(独占一行的元素 p div h1-h6)进行水平居中(自适应居中)
+                        margin:0 auto  上下无法用auto(垂直居中要用其他方法) 只能左右
+                            当设置宽度时 块级元素仍独占一行 其余空间为外边距 auto作用为平分外边距
+                        
+                        margin可以取负值 会使下方元素与自身重叠
+
+     margin存在外边距合并的情况
+        某些情况下相邻元素的上下外边距合并的情况(折叠) 左右不会折叠
+        margin为正向外 为负向内
+        1.相邻兄弟元素的上下外边距会合并: (只设置其中一个就可规避)
+            -两个都为正:取其中较大值
+            -一正一负:两个相加
+            -两个负:重叠 取较小值
+        2.父子元素垂直外边距合并:
+            -给父元素第一个子元素设置外边距时会一并算入父元素外边距中
+            解决:
+             1.给父元素设置一个边框 则不会算入父元素外边距中
+             2.不给子元素设置外边距margin而给父元素设置内边距padding
+        -推荐 兄弟元素之间的间距使用margin 父子元素之间的间距对父元素使用padding
+
+        margin无颜色且不能进行设置 也不会显示元素的背景颜色(显示body的背景色)
+     -->
+        <div class="three">椰子</div>
+        <div class="four">巧克力</div>
+
+        <div class="A">奶茶
+            <div class="B">巧克力奶茶</div>
+        </div>
+
+    <!-- 怪异盒模型 -->
+     <!-- 给元素设置宽高(width height) = content width/height + border width/height + padding width/height -->
+     <!-- 此时设置边框 内边距都会影响内容区域大小  设置外边距时不会 -->
+
+     <!-- 转换盒模型 box-sizing
+        取值:
+         -content-box:使用标准盒模型 默认取值  内容区域大小需求固定
+         -border-box:使用怪异盒模型  盒子区域大小需求固定
+     -->
+</body>
+</html>

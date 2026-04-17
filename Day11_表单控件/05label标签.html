@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- label标签 为表单中各个控件定义标题 点标题就可以选中 -->
+     <!-- label放form里面 for要和id绑定 -->
+     <form action="">
+        选择你的性别:
+        <label for="female">女:</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="male">男:</label>
+        <input type="radio" name="gender" id="male" value="male">
+     </form>
+     <!-- label放form外面 此时不用id 且点击用户名就可以输入 -->
+      <label>
+        用户名:<input type="text" class="one" name="username" placeholder="请输入用户名">
+      </label>
+</body>
+</html>

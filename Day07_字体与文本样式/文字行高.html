@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            width: 200px;
+            height: 100px;
+            background-color: yellow;
+            line-height: 2;
+        }
+        .two{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 100px;
+            line-height: 1.5;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: rgb(104, 104, 222);
+            margin-top: 100px;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 行高: 一行文本高度 控制文本之间行的垂直距离  line-height -->
+     <!-- 取值:
+        1.固定像素取值  px  会因为字体变化而要手动改写
+        2.无单位数值取值  表示相对于当前元素字体大小的倍数
+        
+        文字会在行高中垂直居中
+        行高特殊用法: 一个块级元素只包含单行文本 且块级元素的高度等于行高的时候 可让这行文本在元素中垂直居中
+         但对多行文本不适用 行内级元素也不适用
+        -->
+    <div class="one">墨影愈浓天愈明，摇摆路上月华迎。有爱即是有勇气，确有神秘也相宜。</div>
+    <div class="two">扫一下STAR,在魔法生效期内与牵手的好友一起穿上特别款鬼蝠斗篷并获得进入办公室区域的能力。</div>
+    <div class="box">光遇</div>
+</body>
+</html>

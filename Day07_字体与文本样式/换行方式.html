@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 换行方式 white-space
+     英文特殊换行方式: 单词之间有空格时(表示为文章)会换行 没有空格(当作一个单词)不会换行
+     取值:
+        1.normal:默认取值 文本按正常方式换行
+        2.nowarp:不换行 超出元素也不换行 会出现滚动条
+        
+        overflow处理文本溢出
+        -->
+    <!-- 处理文本溢出并显示...的方法  text-overflow
+        取值:
+            1.clip:默认操作 剪断 但不隐藏  要配合overflow来使用
+            2.ellipsis:使用省略号表示多余文本  代码中有完整内容 而显示会省略 -->
+
+    <!-- 多行文本转换省略号固定语法:
+        1.多行转单行:
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        2.多行转多行:
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display:-webkit-box;  带-为兼容性用法
+            -webkit-line-clamp:2;  取值为数字 要显示几行就显示几
+            -webkit-box-orient:vertical; -->
+</body>
+</html>

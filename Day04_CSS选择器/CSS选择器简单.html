@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>椰子糖的第四个网页</title>
+    <style>
+        /* 标签选择器 */
+        div{
+            color: pink;
+            font-size: 30px;
+        }
+        /* 类选择器 */
+        .one{
+            color: green;
+            font-size: 40px;
+        }
+        /* 类选择器特殊用法 */
+        .first{
+            color: blue;
+        }
+        .second{
+            color: brown;
+        }
+        .thr{
+            font-size: 40px;
+        }
+        /* id选择器 */
+        #one{
+            color: orange;
+            font-size: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 选择器：查找元素 -->
+
+    <!-- 常见选择器(简单) -->
+     <!-- 标签选择器 通过html标签名查找元素 会选中所有该标签名的元素
+      语法：标签名{属性:值;}
+      每一条样式后面都要加上；
+      用标签名选择范围太广 不常用
+    -->
+    <div>椰子糖吃糖</div>
+     <!-- 类选择器 根据标签的class属性来选择元素 可以选到具体的属性 使用最多
+      class属性 每个标签都有
+      语法：.class属性值{属性:值;}
+     -->
+      <!-- 敲.one再回车可直接生成下面代码 -->
+    <div class="one">椰子糖吃面包</div>
+        <!-- 特殊用法: 不同标签可以起相同的class名 一个标签可以有多个class名(之间用,隔开) -->
+         <!-- 现要两个元素有不同的颜色 但其他属性相同
+                可以设置三个class属性来完成 -->
+            <div class="first thr">今天天气好</div>
+            <div class="second thr">今天是大学第一个寒假</div>
+    <!-- id选择器 根据id属性来精准选择某个元素
+     id命名唯一且一个标签不能有多个id名
+     语法: #id属性值{属性:值;}
+     -->
+    <div id="one">今天看番</div>
+    <!-- 通配符选择器 作用于所有元素 一般用于清除默认样式
+     语法: *{属性:值;} -->
+    <!-- 并集选择器 同时给不同元素添加相同样式 可同时选中多个元素
+     语法: 选择器1,选择器2,选择器3,....{}   只要满足其中一个选择器即可被选中  一般也用来清除默认样式 -->
+
+    <!-- id和class的命名规则
+     1.起名见名知义 命名按元素用途或内容(导航栏  nav; 导航栏左侧  nav-left)
+     2.只能包含数字 字母 下划线_ 连字符-  不能以数字开头 不推荐用中文
+     3.多个单词之间用连字符(nav-left) 下划线(nav_left) 大驼峰(NavLeft) 小驼峰(navLeft)  不能用空格 会被当成两个属性值
+     -->
+</body>
+</html>

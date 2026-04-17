@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>椰子糖第六个网页</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .one{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 0 auto;
+        }
+        .box{
+            width: 500px;
+            background-color: purple;
+        }
+        span{
+            background-color: purple;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素类型: 块级元素 行内级元素 行内块级元素 -->
+
+    <!-- 块级元素: 独占一行
+     常见: h1-h6 ul ol li dt dd dl p div
+     默认的时候 宽度会占满父元素的宽度 高度默认为内容高度
+     可自由设置其宽度高度 设置完宽度后仍独占一行 因此此时土豆仍无法与曲奇并行
+     可正常设置margin padding
+     可用margin: 0 auto; 在父元素中进行水平居中
+     -->
+     <div class="box">
+        <div class="one">曲奇</div>
+        <span>土豆</span>
+     </div>
+     
+    <!-- 行内级元素(内联元素): 不独占一行
+     常见: span strong em i a
+     行内级元素的宽度高度由内容大小决定 无法直接设置
+     无法使用margin:0 auto;来进行水平居中
+     不要对行内级元素使用垂直方向的margin padding 易出问题(CSS规范)
+    -->
+     <div style="width: 100px; height: 100px; background-color: blue;">
+        <span>111</span>
+        <span>222</span>
+    </div>
+     
+    <!-- 行内块级元素: 可与其他元素同行排列 也可自由设置元素大小 且可正常使用margin和padding
+     不设置宽高时默认内容大小决定
+     常见: img  没什么常见的 需要自己设置(元素类型转换)
+     但不能用margin居中
+     -->
+</body>
+</html>

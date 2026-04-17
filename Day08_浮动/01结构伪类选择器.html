@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box p:nth-child(2){
+            color: red;
+        }
+        .one div:nth-of-type(1){
+            color: rebeccapurple
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        a:hover{
+            color: orange;
+        }
+        .f{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .s{
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+        /* 当鼠标悬浮在f上改变其子元素s的样式 */
+        .f:hover .s{
+            background-color: blue;
+            /* 设置鼠标显示手指形状 表示元素可以交互 */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- 结构伪类选择器
+     父元素 元素类型:nth-child(n)  选择父元素下的第n个子元素
+     父元素 特定元素类型:nth-of-type(n)  选择父元素下的特定类型的第n个元素
+     父元素 :not(selector)  用于选择不匹配指定选择器的元素 -->
+     <!-- 现要求在不设置class和id以及行内样式的情况下使222样式改变 -->
+    <div class="box">
+        <p>111</p>
+        <p>222</p>
+        <p>333</p>
+        <p>444</p>
+    </div>
+
+    <div class="one">
+        <p>111</p>
+        <div>222</div>
+        <p>333</p>
+        <div>444</div>
+    </div>
+
+    <!-- 伪类选择器
+     :hover{}  鼠标悬浮时显示的样式  可以间接改变其子元素
+     还可改变背景图片
+
+     改变鼠标样式
+     cursor: pointer;
+    -->
+     <a href="https://thatskyshop.cn/">购物商店</a>
+
+     <div class="f">
+        <div class="s"></div>
+     </div>
+</body>
+</html>

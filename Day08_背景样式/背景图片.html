@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-image: url(../Day02_HTML常用标签/img/图片.png);
+            /* 设置背景平铺 bgr */
+            background-repeat: no-repeat;
+            /* 设置背景大小 bgs */
+            background-size: contain;
+            /* 设置背景图片位置 bgp */
+            background-position: 0 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景图片 敲bgi background-image
+     接收图片路径作为值 使用该图片作为背景
+     url中引号: 路径中包含空格或特殊字符时一定要写引号
+     
+     背景图片和背景颜色一样 默认也会延伸到border下方
+
+     背景平铺: 背景图片比元素小时 默认会在水平和垂直方向平铺满 敲bgr来修改  background-repeat
+        取值:
+            1.repeat 默认 水平和垂直都平铺
+            2.no-repeat 不平铺
+            3.repeat-x 水平平铺
+            4.repeat-y 垂直平铺
+
+     背景大小 background-size
+        取值:
+            1.auto 保持原有大小 默认取值
+            2.cover 确保背景图像等比例放大 直到填充满整个元素 可能会有部分图像减排
+            3.contain 确保背景图像等比例放大 直到整个图像在元素中 可能会有部分留白
+            4.具体的尺寸 使用px或百分比取值 background-size:width height(百分比取值为相对于元素宽高而言) 设置成盒子大小 会存在一定图片变形情况
+    
+     背景图片位置 background-position: x y  水平和垂直方向的位置
+        x取值:left center right(方位词用图片中点来定位) 百分比(相对于元素宽高 距离元素左上角的位置)
+        y取值:top center bottom 百分比
+        若只给一个值 另一个默认center  x和y为方位词则可以调换顺序
+     -->
+     <div></div>
+</body>
+</html>

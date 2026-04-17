@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* 变为行内级元素 无法设置宽高 */
+            /* display: inline;
+            background-color: orange;
+            width: 200px;
+            height: 200px; */
+            /* 变为行内块级元素 */
+            display: inline-block;
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+        }
+        span{
+            display: block;
+            background-color: purple;
+            /* 变为块级元素 可设置宽高 */
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 元素类型转换 display
+     取值:
+     -auto:自动类型
+     -block:转换为块级元素  可设宽高 无法并列
+     -inline:转换为行内级元素  无法设宽高 可并列
+     -inline-block:转换为行内块级元素  可设宽高 可并列
+     -none:隐藏元素 不占据空间 不参与布局(消失不显示) 见隐藏元素方法文件
+     -->
+     <!-- 此时需要两个在同一行  可转化为行内级元素 -->
+     <div>曲奇</div>
+     <div>土豆</div>
+     <span>椰子</span>
+
+    <!-- html元素编写注意事项:
+     1.块级元素一般情况下可以包裹任意元素
+        -特殊情况:p标签内不放div p h标签
+     2.行内级和行内块级元素内不要包裹块级元素 -->
+</body>
+</html>
