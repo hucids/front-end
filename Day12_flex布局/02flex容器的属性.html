@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* 定义Flex容器的主轴方向 */
+            flex-direction: row;
+            /* 定义flex容器的换行方式 */
+            flex-wrap: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- 一旦给父元素设置flex 里面的flex项目都会排成一排
+     若flex项目宽度不够 那flex项目会强行压缩放入flex容器 原设置的大小无效
+     -->
+
+    <!-- Flex容器的属性:
+     flex-direction:定义Flex容器的主轴方向
+     取值:
+        1.row:默认 主轴为水平方向 起点在左端
+        2.row-reverse:主轴为水平方向 起点在右端
+        3.column:主轴为垂直方向 起点上端
+        4.column-reverse:主轴垂直方向 起点下端
+
+     flex-wrap:定义flex容器的换行方式
+     取值:
+        1.nowrap:默认 不换行
+        2.wrap:换行 第一行在上方
+        3.wrap-reverse:换行 第一行在下方
+    
+    复合(简写)属性:flex-direction和flex-wrap的缩写属性
+     flex-flow: row wrap;     
+     -->
+</body>
+</html>
