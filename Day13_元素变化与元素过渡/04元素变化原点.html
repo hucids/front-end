@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            margin: 200px auto;
+            transform-origin: top right;
+        }
+        div:hover{
+            transform: rotate(90deg);
+        }
+    </style>
 </head>
 <body>
     <!-- 改变元素变化时的原点位置 transform-origin
@@ -16,5 +32,6 @@
         3.自定义原点: 百分比取值(找到宽高的百分比) ps:25% 75% 左上角为(0,0)位置 建立坐标轴
                      px取值 
      -->
+    <div>曲奇</div>
 </body>
 </html>

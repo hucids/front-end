@@ -5,11 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        /* @keyframes */
+        @keyframes qq{
+            0%{
+                transform: translate(-50px);
+            }
+            50%{
+                transform: translate(0);
+            }
+            100%{
+                transform: translate(50px);
+            }
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 100px auto;
+            animation-name: qq;
+            animation-duration: 3s;
+            /* 匀速运动 */
+            animation-timing-function:linear;
+            animation-iteration-count:2;
+            animation-direction:alternate;
+            animation-fill-mode:backwards;
+            /* 复合属性 只写了一个时间 则默认为动画持续时间 而非延迟时间 */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        }
     </style>
 </head>
 <body>
-    <!-- 元素的动画
-     1.定义动画帧  -->
+    <!-- 元素的动画  主动进行
+     1.定义动画帧 @keyframes 动画帧名称(自定义){}  百分比相对于动画持续时间
+     2.使用动画帧  给需要使用动画的元素添加animation属性
+        取值:
+            - animation-name:指定执行哪一个关键帧动画
+            - animation-duration:指定动画的持续时间
+            - animation-timing-function:指定动画的变化曲线
+            - animation-delay:指定延迟执行的时间
+            - animation-iteration-count:指定动画执行的次数
+                infinite 表示无线次数
+            - animation-direction:指定方向
+                取值:
+                    1.normal:正常 从第一帧到最后一帧
+                    2.reverse:从最后一帧到第一帧
+                    3.alternate:第一帧-最后一帧-第一帧
+                    4.alternate-reverse:最后一帧-第一帧-最后一帧
+            - animation-fill-mode:执行动画最后保留哪一个值
+                取值:
+                    1.none:回到没有执行动画的位置 默认
+                    2.forwards:动画最后一帧的位置
+                    3.backwards:动画第一帧的位置
+     -->
+    <div></div>
 </body>
 </html>

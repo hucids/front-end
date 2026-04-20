@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 200px auto;
+            transform: rotate(90deg);
+        }
+        div:hover{
+            /* 此时并不能转回原位 而是以原位为参考逆时针转90度 */
+            transform: rotate(-90deg);
+        }
+    </style>
 </head>
 <body>
-    <!-- 3.元素的旋转 rotate(angle) 旋转的角度 相对与原来的位置而不是上一次旋转后的位置 只是视觉的变化
+    <!-- 3.元素的旋转 rotate(angle) 旋转的角度 
+     相对与原来的位置而不是上一次旋转后的位置 
+     只是视觉的变化
      取值:deg 度 为单位 可正(顺时针)可负(逆时针)
      -->
+    <div>曲奇</div>
 </body>
 </html>

@@ -4,12 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 200px auto;
+        }
+        div:hover{
+            /* 顺时针水平倾斜20度 */
+            transform: skew(-20deg);
+        }
+    </style>
 </head>
 <body>
     <!-- 元素的倾斜 skew(x,y) 水平和垂直方向上倾斜的角度
      取值:deg 度为单位 
-     负值往反方向倾斜 
+     负值往逆方向倾斜 
      还在原来位置 会遮挡到其他元素 不会影响其他元素位置 只是视觉效果
     -->
+     <div>曲奇</div>
 </body>
 </html>

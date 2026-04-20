@@ -4,8 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            background-color: orange;
+            margin: 200px auto;
+        }
+        div:hover{
+            transform: scale(2,2) rotate(90deg) skew(45deg) translate(-20px,-20px)
+        }
+    </style>
 </head>
 <body>
-    <!-- 简写 transform:无顺序之分 中间以空格分开 从左往右读取 同一取值可以多次书写 -->
+    <!-- 简写 transform:从左往右读取 无顺序之分 中间以空格分开 从左往右读取 同一取值可以多次书写(这样使得顺序不同变化也不同) -->
+    <div>曲奇</div>
 </body>
 </html>

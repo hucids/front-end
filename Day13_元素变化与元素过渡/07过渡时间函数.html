@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            transition: all;
+            transition-duration: 2s;
+        }
+        /* 鼠标放在body区域内就可以触发 */
+        body:hover div{
+            background-color: aqua;
+            transform: translate(600px);
+            transition-timing-function: ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- 过渡的时间函数 transition-timing-function
+     设置在元素上 来回都会有效果
+     取值:
+        ease 慢-加速-慢
+        linear 匀速
+        ease-in 慢-加速
+        ease-out 快-减速
+        ease-in-out 加速-匀速-减速
+        变化不一样 duration一样则同时到
+     -->
+    <div></div>
+</body>
+</html>

@@ -4,14 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            margin: 200px auto;
+        }
+        div:hover{
+            /* 宽高都放大两倍 */
+            transform: scale(2,2);
+            /* 水平镜像 */
+            transform: scale(-1,1);
+            /* 垂直镜像 */
+            transform: scale(1,-1);
+        }
+    </style>
 </head>
 <body>
-    <!-- 元素的变化: transform
+    <!-- 元素的变化: transform属性
     1.元素的平移 
     2.元素的缩放 scale(x,y) x y 为水平(宽度)和垂直(高度)方向上的缩放比例
         默认取值1 大于1放大 小于1缩小
         只取一个值 代表宽高都缩放到这个比例
-        可以去负值 为倒置 镜像效果 大于-1缩小 小于-1放大
+        内部文字也会被拉伸
+        可以去负值 会倒置 镜像效果 大于-1缩小 小于-1放大
       -->
+    <div>曲奇</div>
 </body>
 </html>
