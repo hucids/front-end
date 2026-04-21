@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        input{
+            outline: none;
+        }
+        body{
+            background-color: #eee;
+        }
+        .wrap div a{
+            color: black;
+        }
+        .wrap{
+            width: 400px;
+            height: 335px;
+            background-color: #fff;
+            border-radius: 15px;
+            /* 定位垂直水平居中显示 */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        
+            text-align: center;
+        }
+        .wrap h2{
+            height: 100px;
+            line-height: 100px;
+        }
+        .wrap input{
+            width: 370px;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #eee;
+        }
+        .wrap .box{
+            margin: 20px 0;
+        }
+        .wrap button{
+            width: 360px;
+            height: 40px;
+            background-color: #2980b9;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 15px;
+            cursor: pointer;
+            margin-bottom: 25px;
+        }
+        .wrap div a:hover{
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>登录</h2>
+        <!-- 用div包装成块级元素 -->
+        <div>
+            <input type="text">
+        </div>
+        <div class="box">
+            <input type="text">
+        </div>
+        <button>登录</button>
+        <div>还没有账号？<a href="">注册</a></div>
+    </div>
+</body>
+</html>
