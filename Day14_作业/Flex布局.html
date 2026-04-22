@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #eee;
+        }
+        .wrap{
+            width: 500px;
+            height: 150px;
+            /* background-color: orange; */
+            /* 使用定位垂直水平居中显示 */
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+        .wrap div{
+            width: 110px;
+            height: 70px;
+            background-color: #fff;
+            line-height: 70px;
+            text-align: center;
+            color: #424242;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+        .wrap div span:nth-child(1){
+            width: 25px;
+            height: 25px;
+            /* background-color: red; */
+            display: inline-block;
+        }
+        .wrap div:nth-child(1) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -314px -7px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(2) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -215px -68px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(3) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -314px -8px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(4) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -188px -68px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(5) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -278px -120px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(6) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -369px -8px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(7) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -273px -43px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(8) span:nth-child(1){
+            background: url(./img/comm-spr.webp) no-repeat -191px -43px;
+            vertical-align: -3px;
+        }
+        .wrap div:nth-child(5){
+            position: relative;
+        }
+        .wrap div:nth-child(5) span:nth-child(3){
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            background: url(./img/comm-spr.webp) no-repeat -301px -46px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <span></span>
+            <span>在线客服</span>
+        </div>
+        <div>
+            <span></span>
+            <span>秩序殿堂</span>
+        </div>
+        <div>
+            <span></span>
+            <span>游戏资料</span>
+        </div>
+        <div>
+            <span></span>
+            <span>峡谷之巅</span>
+        </div>
+        <div>
+            <span></span>
+            <span>云顶之弈</span>
+            <span></span>
+        </div>
+        <div>
+            <span></span>
+            <span>攻略中心</span>
+        </div>
+        <div>
+            <span></span>
+            <span>LOL宇宙</span>
+        </div>
+        <div>
+            <span></span>
+            <span>微信绑定</span>
+        </div>
+    </div>
+</body>
+</html>

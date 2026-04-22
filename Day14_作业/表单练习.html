@@ -16,6 +16,7 @@
             background-color: #eee;
         }
         .wrap div a{
+            text-decoration: none;
             color: black;
         }
         .wrap{
@@ -42,6 +43,7 @@
             height: 40px;
             border-radius: 5px;
             border: 1px solid #eee;
+            text-indent: 15px;
         }
         .wrap .box{
             margin: 20px 0;
@@ -57,6 +59,9 @@
             cursor: pointer;
             margin-bottom: 25px;
         }
+        .wrap button:hover{
+            background-color: aqua;
+        }
         .wrap div a:hover{
             color: #2980b9;
         }
@@ -67,12 +72,13 @@
         <h2>登录</h2>
         <!-- 用div包装成块级元素 -->
         <div>
-            <input type="text">
+            <input type="text" placeholder="用户名">
         </div>
         <div class="box">
-            <input type="text">
+            <input type="password" placeholder="密码">
         </div>
         <button>登录</button>
+        <!-- 后续可用js进行跳转 -->
         <div>还没有账号？<a href="">注册</a></div>
     </div>
 </body>
