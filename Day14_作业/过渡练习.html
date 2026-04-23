@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #296c70;
+        }
+        .wrap{
+            width: 870px;
+            height: 500px;
+            /* background-color: orange; */
+            margin: 100px auto;
+        }
+        .wrap div{
+            width: 200px;
+            height: 500px;
+            /* background-color: pink; */
+            float: left;
+            overflow: hidden;
+            transition: all 1.5s;
+        }
+        .wrap div img{
+            width: 670px;
+            height: 500px;
+        }
+        .wrap:hover div{
+            width: 100px;
+        }
+        .wrap div:hover{
+            width: 670px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div>
+            <img src="./img/3.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/4.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/5.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
