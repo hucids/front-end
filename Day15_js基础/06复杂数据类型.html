@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 复杂数据类型 -->
+     <script>
+        // 对象 Object 与py中的字典一样
+        // 以键值对形式存储数据 键是对象属性 值是具体数据
+        // 1.创建一个对象
+        var obj = {
+            'name': "曲奇", // 属性可以加引号
+            age: 18, // 属性也可以不加引号
+            "a b c": true, // 不规则属性名 一定要加引号
+            20: null // 自然数字也可以当属性名 不必加引号
+        }
+        console.log(obj);
+        // 2.对象的取值
+            // 用.操作符进行取值 变量名.属性名
+            console.log(obj.name); // 曲奇
+            // 用[]进行取值 变量名["属性名"] 这里引号不能省
+            console.log(obj["name"]); // 曲奇
+            // 重新赋值
+                // 用变量名.属性名 = "新值"
+                obj.name = "土豆";
+                console.log(obj);
+                // 变量名["属性名"] = "新值"
+                obj["age"] = 20;
+            // 新增属性
+                // 变量名.新增属性名 = "属性值"
+                obj.hobby = "羽毛球";
+                console.log(obj);
+                // 变量名["新增属性名"] = "属性值"
+                obj["class"] = 1;
+                console.log(obj); 
+
+        // 数组  Array 与py中列表类似 但无切片和负数
+        // 定义一个数组
+        var arr = [1, 2, 3, "曲奇", true]
+        console.log(arr);
+        // 数组取值 通过下标取值 从0开始 变量名[下标值]
+        console.log(arr[0]); // 1
+        console.log(arr[5]); // undefined 超出下标值得到undefined
+        // 获取存放数据的个数 length
+        console.log(arr.length);
+        arr.length = 4; // 可通过定义arr的length来裁掉后面的数据
+        console.log(arr);
+        // 修改数组 变量名[下标值] = 新值
+        arr[3] = "土豆";
+        console.log(arr);
+        // 新增数组值 变量名[下标值] = 值
+        arr[4] = 111;
+        console.log(arr);
+        arr[7] = 222; // 能成功定义 但前面未定义的为undefined
+        console.log(arr);
+
+        // 函数 function 与py中函数类似 但不存在匿名和有名函数区别
+        // 定义函数
+        // 法1 声明函数 function 函数名(){函数体代码}
+        function add(){
+            console.log("111");
+        }
+        add() // 执行函数
+        // 法2 函数表达式(与函数声明没区别) 把函数赋值给一个变量
+        var add1 = function(){
+            console.log(222);
+        } // 匿名函数(没有名字)
+        add1()
+     </script>
+</body>
+</html>

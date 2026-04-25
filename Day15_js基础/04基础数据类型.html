@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 基础数据类型 -->
+     <script>
+        // 字符串类型 String
+        // 用''/""/``来创建
+        var a = "曲奇";
+
+        // 数字类型 number
+        // 包含整数 浮点数 NaN(无法计算的值 ps:10*"曲奇" 会转换类型来计算 与py不同)
+        var b = 1;
+        var c = NaN; // 一般不会去自己定义
+
+        // 布尔值类型 Boolean
+        // 两个值 true false 一般用于逻辑判断
+        var d = true;
+
+        // undefined js中特殊值和数据类型
+        // 变量被声明但未被赋值时 默认值为undefined
+        var m;
+        console.log(m); // undefined
+
+        // null 特殊数据类型 用于表示被明确赋予了空值
+        var p = null;
+        console.log(p); // null
+        
+        // Symbol 唯一值
+        // 在程序中创建独一无二的唯一值 唯一值之间无法进行运算 运用场景很少 
+        var s1 = Symbol(10);
+        var s2 = Symbol(10);
+        console.log(s1 == s2); // false
+        
+        // bigint 最大整数类型 用于计算超大值
+        // 计算数值范围在+-2**53 超出之后计算不准确
+        // 此时在数值后添加n 变为bigint类型后可计算准确
+        // bigint类型只能与bigint类型进行计算
+        var n = 9007199254740992n;
+        console.log(n + 1n); // 9007199254740993n
+     </script>
+</body>
+</html>

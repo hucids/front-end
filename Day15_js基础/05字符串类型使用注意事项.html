@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 字符串类型注意事项 -->
+     <script>
+        // 使用+操作符来讲字符串拼接
+        var str1 = "曲奇";
+        console.log("hello" + " " + str1); // hello 曲奇
+        
+        // 字符串中使用\来转义特殊字符
+        var str2 = "今天\"星期四\""
+        console.log(str2); // 今天"星期四"
+
+        // 使用反引号(``)创建模版字符串 其中可嵌入变量和表达式(类似于py中f-string)
+        // 变量使用&{}包裹
+        var str3 = `hello${str1}` // hello曲奇
+        console.log(str3);
+     </script>
+</body>
+</html>

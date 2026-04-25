@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- js简单代码 -->
+    <script>
+        // console.log 在浏览器控制台输出信息 直接敲log
+        //  可接收多个参数(会同一行依次输出) 类似于print内置换行功能
+        console.log("在浏览器控制台输出信息","可接收多个参数");
+        console.log("换行");
+
+        // alert 用于弹出一个警告窗 只接收一个参数 通常为字符串
+        // 一般不同 会自己定义 因为无法修改样式 
+        alert("无法点击")
+
+        // document.write 用于向html页面中写入内容 接收一个或多高字符串作为参数
+        // 没有自带换行功能 需要用换行符br的字符串进行换行
+        document.write("1不换行","2不换行")
+        document.write("<br>","3换行")
+
+        // prompt 用于弹出一个提示框 用户可以在提示框中输入信息(一个参数)
+        var user = prompt("请输入你的姓名")
+        console.log("用户的姓名:",user)
+    </script>
+</body>
+</html>
