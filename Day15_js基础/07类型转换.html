@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--  类型转换  -->
+    <script>
+        // 隐式类型转换:默认 不经意
+        // 字符串类型与任意类型相加 默认转换为字符串类型 进行拼接
+        var a = "10";
+        var b = 20;
+        c = a + b;
+        console.log("c=" + c); // c=1020
+        console.log(typeof c); // string
+        // 其余运算 减-乘*除/ 默认都转换为数字类型进行计算 无法计算的值(比如中文字符串/数字)结果为NaN或报错(很少)
+
+        // 显示类型转换:手动 明确
+        // 转换为字符串类型 String(需要转换数据)
+        var str1 = String(b) // "20" 但在控制台输出时与数字类型无异 类型不同
+        // 转换为数字类型 Number(需要转换类型)
+        console.log(Number(a) + b); // 30
+        console.log(Number("quqi")); // NaN 无法转换的值输出NaN
+            // 一些数据用Number()转换后的值
+            // undefined  NaN
+            // null  0
+            // true  1
+            // false  0
+            // 空string ""  0  (" "空格也是0)
+        
+        // 两个函数
+        // parseInt()
+        // 处理数字字符串 忽略非数字字符 只解析开头整数部分 遇到非数字则停止解析
+        var str2 = "42abc";
+        console.log(Number(str2)); // NaN
+        console.log(parseInt(str2)); // 42
+        console.log(typeof parseInt(str2)); // number
+            // 若字符串开头不包含有效字符串 返回NaN
+            var str3 = "abc42";
+            console.log(parseInt(str3)); // NaN
+            // 开头为小数 返回整数部分
+            var str4 = "42.13zb"
+            console.log(parseInt(str4)); // 42
+        // parseFloat()
+        // 处理数字字符串 包括小数点 解析浮点数 碰到非数字停止解析
+        console.log(parseFloat(str4)); // 42.13
+            // 开头整数看成小数为0的浮点数 仍可解析
+
+        // 转换为布尔值 
+        // Boolean()
+        console.log(Boolean(1)); // true
+        console.log(Boolean(0)); // false
+        console.log(Boolean("  ")); // true
+        // 一些常见为f的数据: 0, NaN, "", undefined, null, 0n
+        
+        // 转换为bigint类型
+        // BigInt()
+        // 先转换为数字类型 再转换为bigint类型 中间无法转换的会报错
+        console.log(BigInt(10)); // 10n
+        console.log(BigInt(true)); // 1n
+        console.log(BigInt("30")); // 30n
+        // console.log(BigInt("quqi"));
+        
+        
+        
+        
+    </script>
+</body>
+</html> 
