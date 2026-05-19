@@ -50,7 +50,54 @@
         //     default:
         //         break;
         // }
-        // key 
+        // key 需要判断的值
+        // value 与key进行比较的值(全等比较 类型要一致)
+        // default 所有case都匹配失败时执行 一般写在末尾
+        var week = Number(prompt("请输入一个数字"));
+        switch (week) {
+            case 1:
+                console.log("今天周一");
+                break; // 每条语句写完都一定要写 否则会有贯穿现象
+            case 2:
+                console.log("今天周二");
+            default:
+                console.log("数据有误");
+                break;
+        }
+      </script>
+      <!-- 循环结构 while  do...while  for
+     -->
+      <script>
+        // for循环
+        // 结构:for(设置一个初始值;循环条件;初始变量进行改变){}
+        for (var i = 0; i < 3; i++) {
+            console.log(i);
+        }
+        // break语句:用于立即退出循环
+        // continue语句:用于跳过本次循环 开始下一次循环
+        for (var i = 0; i < 5; i++) {
+            if (i == 3) {
+                break
+            }
+            console.log(i);
+        }
+
+        // 遍历数组(获取数组内容) 用for循环
+        var arr = ["曲奇", "111", "222", "333"]
+        for (var i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
+        }
+        // 拿取对象中的数据 要用for-in遍历 不能用for循环
+        var obj = {
+            name:"曲奇",
+            age:18,
+            aex:"女",
+        }
+        for (var key in obj) {
+            console.log(key);
+            console.log(obj[key]);
+        }
+        // for-in 也可以遍历数组
       </script>
 </body>
 </html>
