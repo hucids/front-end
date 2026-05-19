@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 比较运算符
+     == != <= >= < >
+     
+     类型一并进行比较:
+     === 全等于判断
+     !== 全不等于判断
+     -->
+    <script>
+        var a = 10;
+        var b = "10";
+        console.log(a == b); // T 会先进行类型转换再比较
+        console.log(a === b); // F 不会进行类型转换 会比较类型
+
+        console.log(a != b); // F
+        console.log(a !== b); // T
+
+        // 运算符优先级
+        // 先(! 前置++/--) 再数字运算符 后置++/-- 逻辑运算符 赋值运算符
+    </script>
+</body>
+</html>

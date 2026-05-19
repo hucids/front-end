@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 算数运算符(赋值运算符)
+     = += -= *= /= %= **=
+     -->
+    <script>
+        var a = 5;
+        a += 5;
+        console.log(a); // 10
+        
+        // 特殊运算符
+        // ++ 自增运算符  加1
+        var b = 1;
+        b ++;
+        console.log(b); // 2 
+        // -- 自减运算符  减1
+        var c = 1;
+        c --;
+        console.log(c); // 0
+        // ++/--只能用于变量 不能用于常量 ps：10--
+
+        // 前置++ -- 先改变变量 再参与运算
+        var m = 10;
+        var n = 20;
+        k = m + ++n;
+        console.log(k); // 31
+        console.log(n); // 21
+        
+        // 后置++ -- 先参与运算 再改变变量
+        var q = 10;
+        var w = 20;
+        e = q + w++;
+        console.log(e); // 30
+        console.log(w); // 21 都会改变变量的原有值
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 流程控制 -->
+     <!-- 分支语句 if/switch -->
+      <script>
+        // if的单分支结构
+        // 语法:if(条件){代码块}  条件成立时执行代码块
+        var a = 4;
+        if(a > 1){
+            console.log("a>1");
+        }
+        // if的双分支结构
+        // 语法:if(条件){条件成立时执行}else{条件不成立时执行}
+        var b = 1;
+        if (b < 1) {
+            console.log("b<1");
+            
+        } else {
+            console.log("b>=1");
+            
+        }
+
+        // 三目运算符(三元运算符) 简化if双分支代码
+        // 语法: 条件判断 ? true执行的语句 : false执行语句
+        // 注:执行语句处只能执行一条语句
+        b < 1 ? console.log("b<1") : console.log("b>=1");
+
+        // if的多分支结构
+        // 语法:if(条件1){条件1成立时执行}else if(条件2){条件2成立时执行}...else{前面条件都不成立时执行}
+        if (b == 10) {
+            console.log(10);
+        }else if(b == 9){
+            console.log(9);
+        }else{
+            console.log(0);
+        }
+
+        // switch语句 自带循环效果
+        // switch (key) {
+        //     case value:
+                
+        //         break;
+        
+        //     default:
+        //         break;
+        // }
+        // key 
+      </script>
+</body>
+</html>
