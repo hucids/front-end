@@ -98,6 +98,26 @@
             console.log(obj[key]);
         }
         // for-in 也可以遍历数组
+
+        // while循环
+        // 语法: while (condition) {条件满足执行的代码}
+        // 注意: 循环体内要有改变循环条件的代码 以免陷入死循环
+        var count = 0;
+        while (count < 5) {
+            console.log(`循环执行次数${count}`);
+            count ++;
+        }
+        console.log("循环体外面部分");
+
+        // do...while循环
+        // 语法: do {代码体} while (condition);
+        // do...while与while不同点: do...while一定会执行一次代码体
+        var a = 8;
+        do {
+            console.log("循环执行");
+            a ++;
+        } while (a < 4);
+        
       </script>
 </body>
 </html>

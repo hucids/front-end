@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- IIEF 自执行函数: 在定义后立刻执行的函数 函数自动执行 -->
+     <script>
+        // 两个括号 注意加上分号(特别是两个自执行函数之间) 表示结束
+        (function add() {
+            console.log("执行");
+        })();
+        // 好处:
+        // 1.函数内部变量执行完后立刻销毁 不会污染全局变量
+        // 2.适用于模块化开发
+     </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 定时器 指定时间来执行代码 -->
+     <script>
+        // 间隔(延时)定时器(设置多长时间后执行)
+        // 语法: setTimeout(() => {}, timeout);
+        // 其中timeout为间隔(延迟)时间 单位默认ms 不需要写单位
+        // 1s = 1000ms
+        setTimeout(() => {
+            // 该代码只会执行一次 且不用再调用
+           console.log("延迟2s出现");
+        }, 2000);
+        // 应用: 网页弹出的广告
+
+        // 循环间隔定时器(每隔多少秒执行一次)
+        // 语法: setInterval(() => {}, interval);
+        // 其中interval为间隔时间 单位默认ms 不需要写单位
+        setInterval(() => {
+            console.log("每隔2s出现");
+        }, 2000);
+     </script>
+</body>
+</html>

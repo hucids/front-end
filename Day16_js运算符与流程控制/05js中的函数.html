@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 函数声明
+        function add() {
+        }
+        // 执行函数
+        add()
+
+        // 函数表达式
+        var add2 = function(){}
+        add2()
+
+        // 箭头函数(简写 语法糖 针对未命名函数)
+        var add3 = () => {
+            console.log("箭头执行函数");
+        }
+        add3()  // 将function(){} 简写为 () => {}
+
+        // 与py中pass类似的函数占位语句
+        // 1.可以什么都不写(空代码块)
+        // 2.void 0; 明确表示无操作 效果同pass
+        function add() {
+            void 0;
+        }
+        // 3.用; 空语句
+        function add() {
+            ;
+        }
+
+        // 函数中的内容
+        // 函数返回值 用return关键字将一个函数内部的值返回给函数外部 这个值可为任意类型
+        function add(){
+            return 111
+        }
+        // 对有返回值的函数 可使用一个变量来接收这个函数的返回值
+        var a = add()
+        console.log(a); // 111
+        // 函数运行到return会立即停止执行函数中return后面的代码
+        // 函数默认返回undefined (当没有使用return语句 或有return后面未跟值)
+
+        // 函数的参数 分为形式参数(形参) 实际参数(实参)
+        // 实参传入 形参接收 一一对应
+        function add4(n, m) { // n, m为形参
+            return n + m;
+        }
+        console.log(add4(1, 1)); // 2 此处1为实参
+        
+        // arguments:表示当前传递的所有参数数组 一次性获取所有参数
+        function add5() { // 直接获取arguments 不需要存在形参
+            console.log(arguments); 
+        }
+        add5(1, 2, 3) // [1, 2, 3]
+        // arguments是类数组 取值方式与数组一致 下标取值
+        // arguments只有普通函数可以使用(箭头函数无法使用) 而...操作符都可使用
+        // ...操作符(reset操作符 剩余操作符 接收剩余内容) 要写在形参的最后位置
+        // 语法: ...数组名称
+        var add6 = (...g) => { // g是一个数组 会接受剩余的所有实参
+            console.log(g);
+        }
+        add6(1, 2, 3) // [1, 2, 3]
+        var add7 = (c, ...g) => { // g是一个数组 会接受剩余的所有实参
+            console.log(c, g);
+        }
+        add7(1, 2, 3) // 1, [2, 3]
+
+        // 函数作用域 函数和变量生效区域
+        // 全局作用域: script标签内部
+        // 局部作用域: 函数内部
+        // 全局作用域的数据在任意局部作用域中都可以使用
+        // 函数外部作用域无法使用局部作用域的数据
+        function add8() {
+            // 局部作用域
+            function add9() {
+                // 局部的局部作用域
+            }
+        }
+
+        // 在全局变量中声明的变量是属于全局的 而局部变量中声明的变量是属于局部的
+        // 声明: 有var的
+        // 局部变量中未通过声明的变量就是使用了全局作用域的变量
+        var a = 10; // 全局变量
+        function add10() {
+            a = 100; // 这里不是局部变量 而是把全局变量a进行重新赋值
+            console.log(a); 
+        }
+        add10() // 100
+        console.log(a); // 100
+        
+        var a = 10; // 全局变量
+        function add10() {
+            var a = 100; // 局部变量 与全局变量a不是一个变量
+            console.log(a); 
+        }
+        add10() // 100
+        console.log(a); // 10
+        // 作用域链: 变量或函数的查询规律  有用自己的 没有依次找上一级 都没有则报错
+        // 在局部新变量名 未通过var声明 且全局不存在该变量名 默认为全局变量名
+        function add11() {
+            n = 10;
+        }
+        add11()
+        console.log(n, "函数外部"); // 10  注意要调用函数才行
+    </script>
+</body>
+</html>

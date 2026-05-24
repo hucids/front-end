@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 同步和异步: 解决线程阻塞问题(js为单线程 必须等上面代码执行完才会执行下面代码)
+    同步: 代码从上往下依次执行
+    异步:
+    规则: 同步代码先执行 异步代码后执行
+    
+    异步代码有: 定时器 在同步代码执行完后再执行
+    -->
+    <script>
+        // 解决异步代码的一个问题
+        (() => {var a = 10;
+        setTimeout(() => {
+            a += 10;
+            console.log(a);
+        }, 1000);})()  // 包裹成自执行函数 这样后续若更改了a变量 该函数仍会用a = 10
+
+        // 很多代码
+        var a = 100;
+    </script>
+</body>
+</html>

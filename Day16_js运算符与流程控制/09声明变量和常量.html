@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var声明变量存在的问题:
+        // 1.同一作用域可以声明相同的变量和函数名
+        // 2.在声明变量之前调用不会报错 会拿到undefined
+
+        // 为避免这种问题 使用let声明变量 (因为比较新 可能会有兼容性问题)
+        // let规则:
+        // 1.同一作用域不可以声明相同的变量和函数名
+        // 2.暂时性死区 在声明变量之前调用会报错
+
+        // const声明常量
+        // 常量: 不可以更改 只能读 在声明常量之前使用也会报错
+        const a = 10;
+    </script>
+</body>
+</html>
