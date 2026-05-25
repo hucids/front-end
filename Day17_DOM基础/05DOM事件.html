@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 50px;
+            background-color: pink;
+            color: #fff;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 事件:行为
+     监听元素的事件 执行相应的功能
+     -->
+     <div class="box">点击</div>
+
+     <script>
+        var divElm = document.querySelector(".box")
+        // console.log(divElm);
+
+        // 元素绑定事件
+        // 语法: 元素.on事件名    (on 表示绑定)
+        divElm.onclick = function() {
+            // function 事件函数 当事件触发时才会执行
+            divElm.setAttribute("style", "background-color:green")
+            console.log("元素被点击 显示绿色");
+        }
+        
+     </script>
+</body>
+</html>

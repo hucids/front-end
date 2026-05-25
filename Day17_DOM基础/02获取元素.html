@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM操作</title>
+    <style>
+        .wrap{
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">曲奇</div>
+    <p class="wrap"></p>
+    <div>111</div>
+    <div id="one">222</div>
+
+    <script>
+        // 通过class名获取
+        // 语法: document.getElementsByClassName("class名")
+        // document: dom 代表整个页面的标签以及内容
+        // getElements 复数 得到多个元素 无s则获取一个
+        let elm = document.getElementsByClassName("wrap") // 此处能同时获取同clss名的div和p标签 都放入一个数组中
+        console.log(elm); // [div.wrap, p.wrap]
+        console.log(elm[0], "div元素");  // <div class="wrap">曲奇</div> div元素
+        
+        // 通过标签名获取
+        // 语法: document.getElementsByTagName("标签名")
+        let elm1 = document.getElementsByTagName("div")  // 得到一个数组 即使只有一个元素 也要用下标值取值使用
+        console.log(elm1[0]); // <div class="wrap">曲奇</div>
+        
+        // 通过id名来进行获取 此时只获取到一个 且不用下标取值
+        let elm2 = document.getElementById("one")
+        console.log(elm2); // <div id="one">222</div>
+
+        // 通过选择器获取 用的最多 
+        // document.querySelector("选择器") 只能获取到第一个元素 可直接使用 不用下标
+        let elm3 = document.querySelector(".wrap")
+        console.log(elm3); // <div class="wrap">曲奇</div>
+        // document.querySelectorAll("选择器") 获取所有满足选择器的元素 数组 需要用下标取值
+        let elm4 = document.querySelectorAll(".wrap")
+        console.log(elm4[1]); // <p class="wrap"></p>
+
+        // 获取html标签
+        // 语法: document.documentElement
+        let htmlElm = document.documentElement
+        console.log(htmlElm);
+
+        // 获取head标签
+        // 语法: document.head
+        let headElm = document.head
+        console.log(headElm);
+        
+        // 获取body标签
+        // 语法: document.body
+        let bodyElm = document.body
+        console.log(bodyElm);
+
+        // 获取title标签
+        // 语法: document.title
+        let titleElm = document.title
+        console.log(titleElm);
+        // 修改内容
+        document.title = "曲奇"
+
+        // 获取元素时 元素包裹的内容也会获取到
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 元素内容: 元素包裹的所有东西 -->
+    <div class="wrap">
+        <p>曲奇饼干</p>
+        <p>111</p>
+        DOM操作
+    </div>
+    
+    <script>
+        let divElm = document.getElementsByClassName("wrap");
+        
+        // 获取元素里所有文本内容 元素.innerText
+        // 不管如何嵌套 所有文本都可获取
+        console.log(divElm[0].innerText);
+        
+        // 修改元素内容 元素.innerText = ...
+        // 设置时会将原有的主题内容(包括内容 文字 标签)全部覆盖
+        // divElm[0].innerText = "土豆111"
+
+        // 获取元素里面的所有内容(文本 标签 注释都可获取)  元素.innerHTML
+        console.log(divElm[0].innerHTML);
+        // 修改元素内容
+        // 设置时会将原有的主题内容(包括内容 文字 标签)全部覆盖
+        // divElm[0].innerHTML = "土豆111"
+        
+        // innerText 和 innerHTML 不同点
+        // innerText不可以解析html标签 会直接把标签当作文本展示在页面上
+        // divElm[0].innerText = "<h1>我是曲奇</h1>"
+        // innerHTML可以正常解析标签
+        divElm[0].innerHTML = "<h1>我是曲奇</h1>"
+    </script>
+</body>
+</html>
